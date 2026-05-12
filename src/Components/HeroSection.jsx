@@ -25,7 +25,7 @@ export default function HeroSection() {
         <>
 
             <Link key={upcomingMovie?.id} to={`/detail/${upcomingMovie?.id}`}>
-                <div className='max-w-7xl mx-auto px-4 pt-10'>
+                <div className='max-w-7xl mx-auto px-4 mt-10'>
 
                     <div className="rounded-3xl overflow-hidden shadow-lg bg-cover bg-center bg-no-repeat relative" style={{
                         backgroundImage: `url(https://image.tmdb.org/t/p/original${upcomingMovie?.backdrop_path})`
