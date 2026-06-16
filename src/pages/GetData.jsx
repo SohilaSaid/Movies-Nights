@@ -26,7 +26,7 @@ export default function GetData({ apiURL, Title }) {
                 setData(res.data.results)
                 setTotalPages(res.data.total_pages)
             })
-            .catch((err) => { console.log(err) })
+            .catch((err) => { console.log(err.response?.data) })
     }, [apiURL, page])
 
     useEffect(() => {
@@ -79,13 +79,13 @@ export default function GetData({ apiURL, Title }) {
             <nav aria-label="Page navigation example mx-auto" className='py-8 '>
                 <ul className="flex justify-center items-center space-x-px text-lg px-4 max-w-7xl mx-auto dark:text-white rounded-lg py-2 ">
                     <li>
-                        <button className="flex items-center justify-center text-body box-border border border-e-0 font-medium text-sm px-3 h-9 hover:text-fuchsia-400" disabled={page === 1} onClick={() => handlePageChange(page - 1)}><i class="fa-solid fa-angle-left"></i> Previous</button>
+                        <button className="flex items-center justify-center text-body box-border border border-e-0 font-medium text-sm px-3 h-9 hover:text-fuchsia-400" disabled={page === 1} onClick={() => handlePageChange(page - 1)}><i className="fa-solid fa-angle-left"></i> Previous</button>
                     </li>
                     <li>
                         <button className='flex items-center justify-center text-body box-border border border-black dark:border-white font-medium text-sm px-3 h-9 text-fuchsia-400'>{page}</button>
                     </li>
                     <li>
-                        <button className="flex items-center justify-center text-body box-border border border-s-0 font-medium text-sm px-3 h-9 hover:text-fuchsia-400" disabled={page === totalPages} onClick={() => handlePageChange(page + 1)}>Next <i class="fa-solid fa-angle-right"></i></button>
+                        <button className="flex items-center justify-center text-body box-border border border-s-0 font-medium text-sm px-3 h-9 hover:text-fuchsia-400" disabled={page === totalPages} onClick={() => handlePageChange(page + 1)}>Next <i className="fa-solid fa-angle-right"></i></button>
                     </li>
                 </ul>
             </nav>

@@ -55,7 +55,7 @@ export default function HeroSection() {
 
 
                                     <span className="text-yellow-400 font-semibold">
-                                        <i class="fa-solid fa-star"></i> {upcomingMovie?.vote_average}
+                                        <i className="fa-solid fa-star"></i> {upcomingMovie?.vote_average}
                                     </span>
 
 
